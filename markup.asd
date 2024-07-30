@@ -2,12 +2,17 @@
   :version "0.0.1"
   :author ""
   :license ""
-  :depends-on ()
+  :depends-on (#:hunchentoot
+               #:caveman2
+               #:spinneret
+               #:djula
+               #:com.inuoe.jzon)
   :components ((:module "src"
                 :components
                 ((:file "main"))))
   :description ""
-  :in-order-to ((test-op (test-op "markup/tests"))))
+  :in-order-to ((test-op (test-op "markup/tests")))
+  :entry-point "markup::main")
 
 (defsystem "markup/tests"
   :author ""
